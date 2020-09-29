@@ -1,0 +1,6 @@
+{
+    "citation": "Zhang, Qi; Zhou, Jianhang; He, Jing; Cun, Xiaodong; Zeng, Shaoning; Zhang, Bob (2019): A shell dataset, for shell features extraction and recognition. figshare. Collection. https://doi.org/10.6084/m9.figshare.c.4428335.v1",
+    "description": "We initially present a shell dataset, containing 7894 shell species with 29622 samples, where totally 59244 shell images for shell features extraction and recognition are used. 134 shell species\u2019 images are analysed by three (colour, shape and texture) feature extraction methods, which is further evaluated by different classifiers.",
+    "title": "A shell dataset, for shell features extraction and recognition",
+    "published": "Published on 15 Oct 2019 - 03:35"
+}

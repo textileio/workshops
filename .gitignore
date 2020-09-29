@@ -1,0 +1,12 @@
+*.pyc
+dist/
+*.egg-info/**/*
+site/
+# macOS
+.DS_Store
+# npm
+node_modules/
+npm-debug.log
+yarn-error.log
+# external docs
+20-09-28-powergate-masterclass/ShellData/structured/files/

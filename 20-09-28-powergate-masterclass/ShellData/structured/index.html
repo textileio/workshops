@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./javascript/jquery.dataTables.min.css">
+        <script type="text/javascript" charset="utf8" src="./javascript/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="./javascript/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#explorer').DataTable( {
+                    ajax: {
+                        "type": "GET",
+                        "url": "images.json",
+                        "dataSrc": "data"
+                    },
+                    "columns" : [
+                        { "data": "filename",
+                            "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                                $(nTd).html("<img src='"+oData.filename+"' height='65px' />");
+                            }
+                        },
+                        { "data": "original",
+                            "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                                $(nTd).html("<a href='"+oData.filename+"' height='65px' >"+oData.original+"</a>");
+                            }
+                        },
+                        { "data" : "genus" },
+                        { "data" : "species" },
+                    ],
+                    columnDefs: [
+                        { className: 'text-center'},
+                    ],
+                    deferRender:    true,
+                    scrollY:        500
+                } );
+            } );
+        </script>
+    </head>
+    <body>
+        <table id="explorer" class="table display table-hover table-bordered compact dt-left" style="width:100%;" data-page-length="10">
+            <thead>
+                <tr>
+                    <th>thumbnail</th>
+                    <th>original</th>
+                    <th>genus</th>
+                    <th>species</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <section>
+            <p>
+                <div>
+                    <a href="metadata.json" style="color: #333; font-size: 10px">
+                        <i>
+                            Zhang, Qi; Zhou, Jianhang; He, Jing; Cun, Xiaodong; Zeng, Shaoning; Zhang, Bob (2019): A shell dataset, for shell features extraction and recognition. figshare. Collection. https://doi.org/10.6084/m9.figshare.c.4428335.v1
+                        </i>
+                    </a>
+                </div>
+            </p>
+        </section>
+    </body>
+</html>
