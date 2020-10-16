@@ -10,7 +10,8 @@ Given on line on 30 September 2020. Document below not maintained, always use ht
 **from source**
 
 `cd textile`
-`make installs`
+
+`make install`
 
 **tour cli**
 
